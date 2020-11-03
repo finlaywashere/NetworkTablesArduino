@@ -14,13 +14,12 @@ public class POC {
 		out.write(new byte[] {0x1,0x0,0x1});
 		
 		// Send client end hello
+		//TODO: Implement protocol v3 so that stuff like this works
 		//out.write(new byte[] {0x5});
 		
 		// Send test entry
-		out.write(new byte[] {0x10,0x0,0x6});
-		out.write("client".getBytes());
-		out.write(new byte[] {0x2,0x0,0x1,0x0,0x1,0x0,0x4});
-		out.write("test".getBytes());
+		out.write(new byte[] {0x11,0x0,0x0,0x0,0x2,0x2,0x0,0x4});
+		out.write("tset".getBytes("UTF-8"));
 		
 		while(true) {
 			byte[] buf = new byte[1];
