@@ -1,0 +1,37 @@
+Modes:
+
+none = 0x0
+server = 0x1
+client = 0x2
+starting = 0x4
+failure = 0x8
+local = 0x10
+
+Port: 1735
+
+Message types:
+
+unknown = -1
+keep alive = 0x0
+client hello = 0x1
+proto unsup = 0x2
+server hello done = 0x3
+server hello = 0x4
+client hello done = 0x5
+entry assign = 0x10
+entry update = 0x11
+flags update = 0x12
+entry delete = 0x13
+clear entries = 0x14
+execute rpc = 0x20
+rpc response = 0x21
+
+Data types:
+boolean = 0x0
+double = 0x1
+string = 0x2
+raw = 0x3
+boolean array = 0x10
+double array = 0x11
+string array = 0x12
+rpc = 0x20
