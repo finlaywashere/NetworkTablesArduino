@@ -29,9 +29,7 @@ public class POC {
 			s.getInputStream().read(buf);
 			switch(buf[0]) {
 			case 0x10:
-				buf = new byte[2];
-				s.getInputStream().read(buf);
-				int length = (buf[0] << 8) + buf[1];
+				int length = (int) readUleb128(s.getInputStream());
 				buf = new byte[length];
 				s.getInputStream().read(buf);
 				String name = new String(buf);
